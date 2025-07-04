@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Card</title>
+    <link rel="stylesheet" href="/assets/css/surat.css" />
+  </head>
+  <body>
+   
+    <div class="body">
+      <div class="birthdayCard">
+        <div class="cardFront">
+          </script>
+          <iframe id ="frameHalaman"></iframe>
+          <img
+            src="https://github.com/DzarelDeveloper/Img/blob/main/ballon.png?raw=true"
+            class="balloons"
+            alt="balloons"
+          />
+          <img
+            src="https://github.com/DzarelDeveloper/Img/blob/main/hat.png?raw=true"
+            alt="bdHat"
+            class="bdHat"
+          />
+          <img
+                     src="/images/cake.jpg"
+               alt="cake"
+               class="cake"
+               />
+          <img src="/images/gambar3.jpg" class="taaImg" />
+          <h2 class="happy">Happy Birthday to Milaa!!</h2>
+        </div>
+        <div class="cardInside">
+          <h3 class="back">HAPPY BIRTHDAY Mill!</h3>
+          <p>From Rikz,</p>
+          <p>
+           Selamat ulang tahun untuk orang yang sangat kusayangi dan kucintai. Semoga di hari istimewa ini, kamu merasa dihargai dan dikelilingi oleh kebahagiaan dan kebaikan. Aku bersyukur bahwa aku diberikan kesempatan untuk merayakan hari spesial ini. Walaupun hanya sekedar membagikan satu link website buatanku yg kurang rapi dan sempurna. Hehe🎉🎂❤️🥂
+          </p>
+          <p>Selamat Ulangtahun Milaa</p>
+        </div>
+      </div>
+    </div>
+    <audio id="paperSound" src="/assets/audio/Page Turn Sound Effect (320).mp3" preload="auto"></audio>
+    <script>
+  const card = document.querySelector('.birthdayCard');
+  const paperSound = document.getElementById('paperSound');
+  let played = false;
+  card.addEventListener('mouseenter', function() {
+    if (!played) {
+      paperSound.currentTime = 0; // mainkan dari awal audio
+      paperSound.play();
+      played = true;
+    }
+  });
+  card.addEventListener('mouseleave', function() {
+    played = false;
+  });
+  // Fallback: jika hover gagal, klik juga memicu suara tanpa delay
+  card.addEventListener('click', function() {
+    paperSound.currentTime = 0; // mainkan dari awal audio
+    paperSound.play();
+  });
+  // Jika error (misal: file tidak ditemukan), log pesan
+  paperSound.addEventListener('error', function(e) {
+    console.warn('Audio gagal diputar. Pastikan file audio ada di path:', paperSound.src);
+  });
+</script>
+</body>
+</html>

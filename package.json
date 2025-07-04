@@ -1,0 +1,12 @@
+{
+  "name": "mil-flower",
+  "version": "1.0.0",
+  "description": "Build pipeline for SCSS to CSS for flower animation.",
+  "scripts": {
+    "build-css": "sass assets/scss:assets/css",
+    "watch-css": "sass --watch assets/scss:assets/css"
+  },
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}
